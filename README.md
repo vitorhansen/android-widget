@@ -61,7 +61,9 @@ com.eyalbira.loadingdots:loading-dots:1.0.2
 To declare your userID:
 ```groovy
 import ai.olivia.lib.Singleton.Olivia
-Olivia().setUserID("Your User ID Or Hash HERE")
+
+Olivia.init(this)
+Olivia.setUserID("36917600822")
 ```
 
 To open the Chat Screen:
@@ -77,21 +79,21 @@ startActivity(i)
 To declare Open App Event:
 ```groovy
 import ai.olivia.lib.Singleton.Olivia
-
-Olivia().openApp()
+Olivia.init(this)
+Olivia.openApp()
 ```
 
 To declare Enable Notification Event:
 ```groovy
 import ai.olivia.lib.Singleton.Olivia
-
-Olivia().enabledNotification()
+Olivia.init(this)
+Olivia.enabledNotification()
 ```
 
 
 To declare Disable Notification Event:
 ```groovy
 import ai.olivia.lib.Singleton.Olivia
-
-Olivia().disableNotification()
+Olivia.init(this)
+Olivia.disableNotification()
 ```
