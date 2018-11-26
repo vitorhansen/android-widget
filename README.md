@@ -62,8 +62,8 @@ To declare your userID:
 ```groovy
 import ai.olivia.lib.Singleton.Olivia
 
-Olivia.init(this)
-Olivia.setUserID("36917600822")
+Olivia.init(context)
+Olivia.setUser("user","password")
 ```
 
 To open the Chat Screen:
@@ -73,8 +73,35 @@ import ai.olivia.lib.view.activity.ChatActivity
 
 val i = Intent(this@MainActivity, ChatActivity::class.java)
 startActivity(i)
+
 ```
 
+To open the Chat Screen with notification params:
+
+```groovy
+import ai.olivia.lib.view.activity.ChatActivity
+
+val i = Intent(this@MainActivity, ChatActivity::class.java)
+i.putExtra("OliviaNotification", "stringFromNotification")
+startActivity(i)
+
+```
+
+To customize the Chat Screen
+```groovy
+Olivia.appBarColor = Color.parseColor("#CCCCCC")
+Olivia.background = Color.parseColor("#B0E58A")
+
+Olivia.userBubbleColor = Color.parseColor("#B76FB1")
+Olivia.userTextColor = Color.parseColor("#FFB99A")
+
+Olivia.oliviaBubbleColor = Color.parseColor("#394F2A")
+Olivia.oliviaTextColor = Color.parseColor("#CCCCCC")
+
+Olivia.fontSize = 18.0f
+
+Olivia.fontFamily = Typeface.SERIF
+```
 
 To declare Open App Event:
 ```groovy
